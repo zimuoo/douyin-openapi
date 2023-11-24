@@ -8,14 +8,14 @@ use Ydg\FoudationSdk\ServiceContainer;
 
 /**
  * @property Oauth\Oauth $oauth
- * @property Zimuoo\DouyinOpenapi\Api\Life\GoodsLife\OutsideDistribution $lifeOutsideDistribution
- * @property Zimuoo\DouyinOpenapi\Api\Life\GoodsLife\OutsideDistribution $goodsLife
+ * @property Api\Life\OutsideDistribution\OutsideDistribution $lifeOutsideDistribution
+ * @property Api\Life\GoodsLife\GoodsLife $goodsLife
  */
 class Douyin extends ServiceContainer
 {
     protected $providers = [
         Oauth\ServiceProvider::class,
-        Zimuoo\DouyinOpenapi\Api\Life\GoodsLife\ServiceProvider::class,
+        Api\Life\OutsideDistribution\ServiceProvider::class,
         Api\Life\GoodsLife\ServiceProvider::class,
     ];
 }
