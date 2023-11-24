@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Zimuoo\DouyinOpenapi\Api\Life\OutsideDistribution;
+namespace Zimuoo\DouyinOpenapi\Api\Life\GoodsLife;
 
 
 use Zimuoo\DouyinOpenapi\DouyinClient;
@@ -18,9 +18,9 @@ class GoodsLife extends DouyinClient
      * @author: yijun
      * @Time: 2023/11/24   4:55 下午
      */
-    public function certificate_prepare($params): ?array
+    public function certificate_prepare($params,$accessToken=''): ?array
     {
-        return $this->get('/goodlife/v1/fulfilment/certificate/prepare/', $params);
+        return $this->get('/goodlife/v1/fulfilment/certificate/prepare/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -31,9 +31,9 @@ class GoodsLife extends DouyinClient
      * @author: yijun
      * @Time: 2023/11/24   4:58 下午
      */
-    public function certificate_cancel($params): ?array
+    public function certificate_cancel($params,$accessToken=''): ?array
     {
-        return $this->json('/goodlife/v1/fulfilment/certificate/cancel/', $params);
+        return $this->json('/goodlife/v1/fulfilment/certificate/cancel/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -45,9 +45,9 @@ class GoodsLife extends DouyinClient
      * @author: yijun
      * @Time: 2023/11/24   5:21 下午
      */
-    public function certificate_get($params): ?array
+    public function certificate_get($params,$accessToken=''): ?array
     {
-        return $this->get('/goodlife/v1/fulfilment/certificate/get/', $params);
+        return $this->get('/goodlife/v1/fulfilment/certificate/get/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -58,8 +58,8 @@ class GoodsLife extends DouyinClient
      * @author: yijun
      * @Time: 2023/11/24   5:23 下午
      */
-    public function certificate_verify($params): ?array
+    public function certificate_verify($params,$accessToken=''): ?array
     {
-        return $this->json('/goodlife/v1/fulfilment/certificate/verify/', $params);
+        return $this->json('/goodlife/v1/fulfilment/certificate/verify/', $params,['access_token'=>$accessToken]);
     }
 }

@@ -29,37 +29,37 @@ class DouyinClient extends FoundationApi
         $this->baseUri = $baseUri;
     }
 
-    public function json(string $method, array $param): ?array
+    public function json(string $method, array $param,array $header): ?array
     {
         $response = $this->getHttpClient()->json($this->getUri($method), $param, [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'access-token' => $this->offsetGet('access_token'),
+                'access-token' => $header['access_token'],
             ],
         ]);
         return Utils::jsonResponseToArray($response);
     }
 
-    public function post(string $method, array $param): ?array
+    public function post(string $method, array $param,array $header): ?array
     {
         $response = $this->getHttpClient()->post($this->getUri($method), $param, [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'access-token' => $this->offsetGet('access_token'),
+                'access-token' =>  $header['access_token'],
             ],
         ]);
         return Utils::jsonResponseToArray($response);
     }
 
-    public function get(string $method, array $param): ?array
+    public function get(string $method, array $param,array $header): ?array
     {
         $response = $this->getHttpClient()->get($this->getUri($method), $param, [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
-                'access-token' => $this->offsetGet('access_token'),
+                'access-token' =>  $header['access_token'],
             ],
         ]);
         return Utils::jsonResponseToArray($response);
