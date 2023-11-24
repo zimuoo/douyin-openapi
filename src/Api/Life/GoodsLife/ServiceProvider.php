@@ -6,7 +6,7 @@ namespace Zimuoo\DouyinOpenapi\Api\Life\GoodsLife;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Zimuoo\DouyinOpenapi\Api\Life\OutsideDistribution\GoodsLife;
+use Zimuoo\DouyinOpenapi\Api\Life\GoodsLife\GoodsLife;
 
 class ServiceProvider implements ServiceProviderInterface
 {

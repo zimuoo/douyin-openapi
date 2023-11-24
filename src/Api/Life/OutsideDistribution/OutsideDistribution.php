@@ -23,9 +23,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['share_params']['need_zlink'] ⾃是否返回zlink，默认false
      * @example params['share_params']['need_command'] ⾃是否需要⼝令，默认false
      */
-    public function command_parse_and_share($params): ?array
+    public function command_parse_and_share($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/command_parse_and_share/', $params);
+        return $this->json('/api/life/v1/outside_distribution/command_parse_and_share/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -44,9 +44,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['category_id']⽤⼾筛选项：商品类⽬-任意级别
      * @example params['need_invoice']⽤⼾筛选项：筛选项：是否需要发票（商家给出分佣佣金后需要发票）
      */
-    public function search_product($params): ?array
+    public function search_product($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/search_product/', $params);
+        return $this->json('/api/life/v1/outside_distribution/search_product/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -59,9 +59,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['latitude']⽤⼾位置的纬度(WGS84坐标)。如果不传，默认北京王府井
      * @example params['product_id_list']⽤⼾商品id列表，示例：[456,789]
      */
-    public function mget_produce_by_id($params): ?array
+    public function mget_produce_by_id($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/mget_produce_by_id/', $params);
+        return $this->json('/api/life/v1/outside_distribution/mget_produce_by_id/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -79,9 +79,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['update_time_begin']⽤⼾筛选项：订单更新时间的开始值（秒级时间戳）
      * @example params['update_time_end']⽤筛选项：订单更新时间的结束值（秒级时间戳）
      */
-    public function query_order($params): ?array
+    public function query_order($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/query_order/', $params);
+        return $this->json('/api/life/v1/outside_distribution/query_order/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -92,9 +92,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['date'] 日期，如想下载2023年8月15号的订单，传2023-08-15
      * @example params['file_type'] 固定传 1 订单
      */
-    public function download($params): ?array
+    public function download($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/download/', $params);
+        return $this->json('/api/life/v1/outside_distribution/download/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -108,9 +108,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['site_id'] 推广位ID，不传默认生成
      * @example params['site_name'] 推广位名
      */
-    public function create_pid($params): ?array
+    public function create_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/create_pid/', $params);
+        return $this->json('/api/life/v1/outside_distribution/create_pid/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -122,9 +122,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['media_name'] 渠道名
      * @example params['site_name'] 推广位名
      */
-    public function modify_pid($params): ?array
+    public function modify_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/modify_pid/', $params);
+        return $this->json('/api/life/v1/outside_distribution/modify_pid/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -138,9 +138,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['cursor'] 起始值为0，获取更多数据，需带上上次请求返回的cursor
      * @example params['count'] 获取数量
      */
-    public function query_pid($params): ?array
+    public function query_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/query_pid/', $params);
+        return $this->json('/api/life/v1/outside_distribution/query_pid/', $params,['access_token'=>$accessToken]);
     }
 
     /**
@@ -150,8 +150,8 @@ class OutsideDistribution extends DouyinClient
      * @example params['uid'] 抖音的达人账号UID
      * @example params['pids'] PID列表，示例：['dy_123','dy_456']
      */
-    public function delete_pid($params): ?array
+    public function delete_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/delete_pid/', $params);
+        return $this->json('/api/life/v1/outside_distribution/delete_pid/', $params,['access_token'=>$accessToken]);
     }
 }
