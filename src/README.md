@@ -1,0 +1,1 @@
+本包是根据ydg/douyin-open-sdk修改而来，感谢作者的辛苦付出~

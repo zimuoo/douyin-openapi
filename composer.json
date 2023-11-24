@@ -1,0 +1,41 @@
+{
+    "name": "zimuoo/douyin-openapi",
+    "description": "对接都应开放平台的sdk",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "sdk",
+        "douyin",
+        "douyin-open",
+        "douyin-open-sdk"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zimuoo\\DouyinOpenapi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yijun",
+            "email": "296528828@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "ydg/foudation-sdk": "^1.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.12",
+        "phpunit/phpunit": "^9.5",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs-fix": "php-cs-fixer fix ."
+    }
+}
