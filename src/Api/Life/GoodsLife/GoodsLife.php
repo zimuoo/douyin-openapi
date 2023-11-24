@@ -35,4 +35,31 @@ class GoodsLife extends DouyinClient
     {
         return $this->json('/goodlife/v1/fulfilment/certificate/cancel/', $params);
     }
+
+    /**
+     * @Notes:券状态查询
+     * @Interface certificate_get
+     * @param $params
+     * encrypted_code  验券准备接口返回的加密券码（传参前需要先进行URL编码）
+     * @return array|null
+     * @author: yijun
+     * @Time: 2023/11/24   5:21 下午
+     */
+    public function certificate_get($params): ?array
+    {
+        return $this->get('/goodlife/v1/fulfilment/certificate/get/', $params);
+    }
+
+    /**
+     * @Notes:验券
+     * @Interface certificate_verify
+     * @param $params
+     * @return array|null
+     * @author: yijun
+     * @Time: 2023/11/24   5:23 下午
+     */
+    public function certificate_verify($params): ?array
+    {
+        return $this->json('/goodlife/v1/fulfilment/certificate/verify/', $params);
+    }
 }
