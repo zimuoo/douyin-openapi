@@ -1,6 +1,6 @@
 {
     "name": "zimuoo/douyin-openapi",
-    "description": "对接都应开放平台的sdk",
+    "description": "对接抖音开放平台的sdk",
     "license": "MIT",
     "keywords": [
         "php",
