@@ -20,7 +20,7 @@ class GoodsLife extends DouyinClient
      */
     public function certificate_prepare($params,$accessToken=''): ?array
     {
-        return $this->get('/goodlife/v1/fulfilment/certificate/prepare/', $params,['access_token'=>$accessToken]);
+        return $this->get('/goodlife/v1/fulfilment/certificate/prepare/', $params);
     }
 
     /**
@@ -33,7 +33,7 @@ class GoodsLife extends DouyinClient
      */
     public function certificate_cancel($params,$accessToken=''): ?array
     {
-        return $this->json('/goodlife/v1/fulfilment/certificate/cancel/', $params,['access_token'=>$accessToken]);
+        return $this->json('/goodlife/v1/fulfilment/certificate/cancel/', $params);
     }
 
     /**
@@ -47,7 +47,7 @@ class GoodsLife extends DouyinClient
      */
     public function certificate_get($params,$accessToken=''): ?array
     {
-        return $this->get('/goodlife/v1/fulfilment/certificate/get/', $params,['access_token'=>$accessToken]);
+        return $this->get('/goodlife/v1/fulfilment/certificate/get/', $params);
     }
 
     /**
@@ -60,6 +60,6 @@ class GoodsLife extends DouyinClient
      */
     public function certificate_verify($params,$accessToken=''): ?array
     {
-        return $this->json('/goodlife/v1/fulfilment/certificate/verify/', $params,['access_token'=>$accessToken]);
+        return $this->json('/goodlife/v1/fulfilment/certificate/verify/', $params);
     }
 }

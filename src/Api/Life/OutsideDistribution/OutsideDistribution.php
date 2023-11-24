@@ -23,9 +23,9 @@ class OutsideDistribution extends DouyinClient
      * @example params['share_params']['need_zlink'] ⾃是否返回zlink，默认false
      * @example params['share_params']['need_command'] ⾃是否需要⼝令，默认false
      */
-    public function command_parse_and_share($params,$accessToken=''): ?array
+    public function command_parse_and_share($params): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/command_parse_and_share/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/command_parse_and_share/', $params);
     }
 
     /**
@@ -46,7 +46,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function search_product($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/search_product/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/search_product/', $params);
     }
 
     /**
@@ -61,7 +61,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function mget_produce_by_id($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/mget_produce_by_id/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/mget_produce_by_id/', $params);
     }
 
     /**
@@ -81,7 +81,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function query_order($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/query_order/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/query_order/', $params);
     }
 
     /**
@@ -94,7 +94,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function download($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/download/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/download/', $params);
     }
 
     /**
@@ -110,7 +110,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function create_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/create_pid/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/create_pid/', $params);
     }
 
     /**
@@ -124,7 +124,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function modify_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/modify_pid/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/modify_pid/', $params);
     }
 
     /**
@@ -140,7 +140,7 @@ class OutsideDistribution extends DouyinClient
      */
     public function query_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/query_pid/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/query_pid/', $params);
     }
 
     /**
@@ -152,6 +152,6 @@ class OutsideDistribution extends DouyinClient
      */
     public function delete_pid($params,$accessToken=''): ?array
     {
-        return $this->json('/api/life/v1/outside_distribution/delete_pid/', $params,['access_token'=>$accessToken]);
+        return $this->json('/api/life/v1/outside_distribution/delete_pid/', $params);
     }
 }
